@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+:root{
+    --text-color:white;
+    --main-color:#0ccff6;
+}
+.body{
+    background-color: white;
+    align-items: center;
+    background-position: center;
+}.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header  img{
+    position: absolute;
+    top: 0;
+    height: 120px;
+    width: 120px;
+}
+.logo-name {
+    font-weight: bold;
+    margin-top: 40px;
+    margin-left: 120px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.3s ease;
+}
+
+.logo-name:hover{
+    transform: scale(1.1);
+}
+.logo-name span{
+    color: #0ccff6;
+    text-shadow: 0 0 25px var(rgb(25, 118, 233));
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: black;
+    display: none;
+}
+.navbar{
+    margin-top: 38px;
+}
+.navbar a{
+    padding: 60px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 550;
+    transition: 0.3s ease;
+    
+}
+.navbar a:hover{
+    color: #0ccff6;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+   margin-left: 30px;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 2rem;
+}
+span{
+    color: var(--main-color);
+}
+.logo span{
+    color: var(--main-color);
+}
+.home-content h3{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    line-height: 1;
+}
+.home-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 10.5rem;
+    line-height: 1;
+}
+.home-img img{
+    position: relative;
+    bottom: 0;
+  
+    height: 650px;
+    width: 700px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.home-content p{
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.3;
+    max-width: 1000px;
+}
+.social-icons a{
+    display: inline-flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: transparent;
+    border: 2px solid black;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: black;
+    margin: 3rem 3rem 3rem 0rem;
+    transition: 0.3s ease-in-out;
+}
+.social-icons a:hover{
+    color: var(--text-color);
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 50px ;
+    
+}
+.social-icons a.whatsapp:hover{
+    background: linear-gradient(#5FFC7B,#28D146);
+    color: rgb(253, 254, 252);
+    box-shadow: 0 0 50px rgb(10, 251, 10);
+    
+}
+.social-icons a.linkedin:hover{
+    background: linear-gradient(#0A66C2,#3666d5);
+    color: rgb(253, 254, 252);
+    box-shadow: 0 0 50px rgb(10, 102, 194);
+    
+}
+
+.social-icons a.facebook:hover{
+    background: linear-gradient(#0165E1,#4004f2);
+    color: rgb(253, 254, 252);
+    box-shadow: 0 0 50px rgb(1, 101, 225);
+    
+}
+.social-icons a.instagram:hover{
+    background:linear-gradient(45deg,#405de6,#5851db,#833ab4,#c13584,#e1306c,#fd1d1d,#F56040,#F77737,#FCAF45,#FFDC80,#FFFFFF );
+    color: rgb(253, 254, 252);
+    box-shadow: 0px 0px 50px rgb(251, 10, 179);
+    
+}
+.social-icons a.twitter:hover{
+    background: rgb(27, 168, 255);
+    color: rgb(252, 251, 251);
+    box-shadow: 0 0 50px rgb(27, 168, 255);
+    
+}
+
+.btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.8rem 2.4rem;
+    background: var(--main-color);
+    box-shadow: 0 0 25px var(--text-color);
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    color: white;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 50px var(--text-color);
+}
+.btn-group{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.btn-group a:nth-of-type(2){
+    background-color: black;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+.text-animation{
+    
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.text-animation span{
+    position: relative;
+}
+.text-animation span::before{
+    content: "Web Developer";
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% +8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+   
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+@keyframes words{
+    0%,
+    20%{
+        content: "Weight Gain";
+    }
+    21%,
+    40%{
+        content: "Weight Loss";
+    }
+    41%,
+    60%{
+        content: "Diet PLan";
+    }
+    61%,
+    80%{
+        content: "Bulking";
+    }
+    81%,
+    100%{
+        content: "Cutting";
+    }
+}
+@keyframes typing {
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,   
+    25%,   
+    40%,   
+    45%,   
+    60%,   
+    65%,   
+    80%,   
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+@media only screen and (max-width: 320px){
+    .header img{
+        display: none;
+    }
+
+    .home-img{
+        display: none;
+    }
+    .logo-name{
+        margin-left: 0;
+        padding: 3px;
+    }
+    .logo-name span{
+        position: relative;
+       
+    }
+    .home{
+        margin-left: 5px;
+    }
+    .navbar{
+        display: none;
+        
+    }
+    #menu-icon{
+        display: block;
+        margin-top:42px;
+        margin-right: 0;
+        font-size: 45px;
+    }
+    .home-content{
+        margin-left: 0;
+    }
+    
+
+   .home-content h3{
+        font-size:15px;
+    }
+    .home-content p{
+        font-size: 10px;
+    }
+    .home-content h1{
+        font-size: 25px;
+
+    }
+    
+    .social-icons a{
+            display: inline-flex;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: transparent;
+            border: 2px solid black;
+            font-size: 1.5rem;
+            border-radius: 50%;
+            color: black;
+        
+            margin: 1rem 0.5rem 1.5rem 0rem;
+            transition: 0.3s ease-in-out;
+    }
+    .btn{
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.8rem 1.4rem;
+        background: var(--main-color);
+        box-shadow: 0 0 25px var(--text-color);
+        border-radius: 2rem;
+        font-size: 0.5rem;
+        color: white;
+        gap: 1.5px;
+        border: 2px solid transparent;
+        letter-spacing: 0.1rem;
+        font-weight: 300;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    
+}
+
